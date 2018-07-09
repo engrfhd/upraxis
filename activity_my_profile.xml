@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="MY PROFILE"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/title_txt">
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:orientation="vertical"
+                android:elevation="8dp"
+                android:stateListAnimator="@null"
+                android:background="@drawable/main_gradient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_picture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:elevation="8dp"
+                    android:stateListAnimator="@null"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/com_facebook_profile_picture_blank_portrait"/>
+
+                <TextView
+                    android:id="@+id/profile_name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/profile_email"
+                    android:text="Email"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/personal_txt"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/personal_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/line1"
+                android:layout_alignStart="@+id/line1"
+                android:layout_below="@+id/ll_1"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:text="Personal information:"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/profile_age"
+                android:text="Age"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/personal_txt"/>
+
+            <TextView
+                android:id="@+id/profile_birthday"
+                android:text="Birthday"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_age"/>
+
+            <TextView
+                android:id="@+id/profile_address"
+                android:text="Address"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_birthday"/>
+
+            <View
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/profile_address"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/line1" />
+
+            <TextView
+                android:id="@+id/contact_txt"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_alignLeft="@+id/line1"
+                android:layout_alignStart="@+id/line1"
+                android:text="Contact Person Information:"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"/>
+
+            <TextView
+                android:id="@+id/profile_contact_person"
+                android:text="Contact Person"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_txt"/>
+
+            <TextView
+                android:id="@+id/profile_contact_number"
+                android:text="Contact number"
+                android:textSize="16sp"
+                android:textColor="@color/colorBlack"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/profile_contact_person"/>
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="300dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/profile_contact_number"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="16dp"
+                android:layout_weight="1"
+                android:layout_below="@+id/line2"
+                android:background="@drawable/curvy_border"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="8dp"
+                android:stateListAnimator="@null"
+                android:text="Logout"
+                android:textColor="@color/colorWhite"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
